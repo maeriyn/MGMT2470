@@ -1,0 +1,37 @@
+{
+  "investor": "galaxy",
+  "investor_a_investment": 5000000.0,
+  "total_a_investment": 5000000.0,
+  "target_irr": 0.60,
+  "default_pe_multiple": 40.0,
+  "default_exit_horizon_years": 6,
+  "base_year": 2030,
+  "base_revenue": 52000000.0,
+  "base_net_income": 3450000.0,
+  "default_margin": 0.066,
+  "default_cagr": 0.0,
+  "cap_table": {
+    "founders_common_shares": 3000000,
+    "early_employees_common_shares": 500000,
+    "option_pool_pre_shares": 1500000,
+    "pre_money_fully_diluted_shares": 5000000
+  },
+  "preference": {
+    "multiple": 2.0,
+    "participating": false,
+    "participation_cap_multiple": null
+  },
+  "dividends": {
+    "rate": 0.10,
+    "payable_on": "liquidity",
+    "compounding": false
+  },
+  "mandatory_ipo_conversion": true,
+  "follow_on": {
+    "investment_amount": 15000000.0,
+    "year_offset": 4,
+    "series_b_price_multiple": 2.0,
+    "pro_rata_participation": 1.0
+  }
+}
+

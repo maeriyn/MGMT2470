@@ -1,0 +1,37 @@
+{
+  "investor": "acorn",
+  "investor_a_investment": 3000000.0,
+  "total_a_investment": 5000000.0,
+  "target_irr": 0.50,
+  "default_pe_multiple": 60.0,
+  "default_exit_horizon_years": 5,
+  "base_year": 2030,
+  "base_revenue": 52000000.0,
+  "base_net_income": 3450000.0,
+  "default_margin": 0.066,
+  "default_cagr": 0.0,
+  "cap_table": {
+    "founders_common_shares": 3000000,
+    "early_employees_common_shares": 500000,
+    "option_pool_pre_shares": 3000000,
+    "pre_money_fully_diluted_shares": 6500000
+  },
+  "preference": {
+    "multiple": 1.0,
+    "participating": true,
+    "participation_cap_multiple": null
+  },
+  "dividends": {
+    "rate": 0.10,
+    "payable_on": "ipo_or_sale",
+    "compounding": false
+  },
+  "mandatory_ipo_conversion": true,
+  "follow_on": {
+    "investment_amount": 10000000.0,
+    "year_offset": 3,
+    "series_b_price_multiple": 2.0,
+    "pro_rata_participation": 1.0
+  }
+}
+

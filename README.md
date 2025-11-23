@@ -41,9 +41,10 @@ The repo ships with a `vercel.json` that deploys the React UI as a static build 
 
 1. Install the Vercel CLI (`npm i -g vercel`) and log in with `vercel login`.
 2. From the repo root run `vercel` once to create/link a project. The CLI will pick up `vercel.json`, install `frontend` deps, and build the Vite app.  
-3. The Python function (`api/index.py`) reuses `backend.main:app` via `mangum`. All data files under `data/terms/**` are bundled so term versions are available at runtime.
-4. Frontend API calls default to the same origin. For local dev continue exporting `VITE_API_BASE=http://localhost:8000` (or add it to `.env`), but no environment variable is needed on Vercel.
-5. Use `vercel --prod` when you are ready for production. You can run `vercel dev` locally to exercise the exact serverless/runtime behavior before deploying.
+3. A workspace-level `package.json` proxies `npm run build` to `frontend`, so Vercel just runs `npm install && npm run build` at the repo root (same as you can do locally to reproduce CI).
+4. The Python function (`api/index.py`) reuses `backend.main:app` via `mangum`. All data files under `data/terms/**` are bundled so term versions are available at runtime.
+5. Frontend API calls default to the same origin. For local dev continue exporting `VITE_API_BASE=http://localhost:8000` (or add it to `.env`), but no environment variable is needed on Vercel.
+6. Use `vercel --prod` when you are ready for production. You can run `vercel dev` locally to exercise the exact serverless/runtime behavior before deploying.
 
 
 

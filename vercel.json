@@ -3,25 +3,24 @@
   "builds": [
     {
       "src": "api/index.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.11",
+        "maxDuration": 10,
+        "memory": 1024,
+        "includeFiles": "data/**"
+      }
     },
     {
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "frontend/dist",
-        "buildCommand": "npm run build"
+        "installCommand": "cd frontend && npm install",
+        "buildCommand": "cd frontend && npm run build"
       }
     }
   ],
-  "functions": {
-    "api/index.py": {
-      "runtime": "python3.11",
-      "maxDuration": 10,
-      "memory": 1024,
-      "includeFiles": "data/**"
-    }
-  },
   "routes": [
     {
       "src": "/api/(.*)",
